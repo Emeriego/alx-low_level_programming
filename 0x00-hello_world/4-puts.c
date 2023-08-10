@@ -1,7 +1,14 @@
 #include <stdio.h>
 
 /**
- * This code prints to the standard output using the puts function
+ * This code prints to the standard output using the puts function.
+ */
+
+/**
+ * main - Entry Point.
+ *
+ * Description: This prints the string as indicated.
+ * Return: Always 0 if successful
  */
 int main(void)
 {
