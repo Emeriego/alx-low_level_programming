@@ -8,7 +8,7 @@
 int main(void)
 {
 	int i = 0;
-	
+
 	while (i <= 7)
 	{
 		int j = i + 1;
@@ -16,6 +16,7 @@ int main(void)
 		while (j <= 8)
 		{
 			int k = j + 1;
+
 			while (k <= 9)
 			{
 				putchar(i + '0');
@@ -28,10 +29,10 @@ int main(void)
 				}
 				k++;
 			}
-			x++;
+			j++;
 		}
 		putchar('\n');
 		i++;
-	}return 0;
+	}
+	return (0);
 }
-
