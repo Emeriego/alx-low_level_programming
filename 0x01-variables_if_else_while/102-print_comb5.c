@@ -30,5 +30,6 @@ int main(void)
 		}
 		i++;
 	}
+	putchar(',');
 	return (0);
 }
