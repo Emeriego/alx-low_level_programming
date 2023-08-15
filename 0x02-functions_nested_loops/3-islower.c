@@ -5,7 +5,7 @@
  * _islower - this does what you see.
  *
  * Description: This func does what it does.
- *
+ * Return: returns 1 if success but 0 if false.
  */
 int _islower(int c)
 {
