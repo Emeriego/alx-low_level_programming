@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * print_last_digit - this does what you see.
  * @n: The character to be checked.
@@ -10,10 +11,15 @@
 int print_last_digit(int n)
 {
 	int a;
+	n = abs(n);
 
-	if (n < 0)
+	if (n > 99)
 	{
-		a = (n * -1) % 10;
+		a = ((n / 100) / 10) % 10;
+	}
+	else if (n > 999)
+	{
+		a = (((n / 1000) / 100) / 10) % 10;
 	}
 	else
 	{
