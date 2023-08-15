@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 /**
- * _islower - this does what you see.
+ * _isalpha - this does what you see.
  * @c: The character to be checked.
  *
  * Description: This func does what it does.
