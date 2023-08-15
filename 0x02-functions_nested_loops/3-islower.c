@@ -3,8 +3,8 @@
 #include <ctype.h>
 /**
  * _islower - this does what you see.
- * @c: The character to be checked
- * 
+ * @c: The character to be checked.
+ *
  * Description: This func does what it does.
  * Return: returns 1 if success but 0 if false.
  */
