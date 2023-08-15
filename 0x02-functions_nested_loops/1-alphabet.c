@@ -2,11 +2,18 @@
 /**
  * main - Entry point.
  *
- * Description: Just a code.
- * Return: always 0.
+ * Description: This func does what it does.
+ * Return: returns 0.
  */
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
+	char i = 'a';
+
+	while (i <= 'z')
+	{
+		_putchar(i);
+		i++;
+	}
+	_putchar('\n');
 	return (0);
 }
