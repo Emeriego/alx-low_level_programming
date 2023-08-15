@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * main - Entry point.
+ * print_alphabet - this does what you see.
  *
  * Description: This func does what it does.
- * Return: returns 0.
+ * 
  */
 void print_alphabet(void)
 {
