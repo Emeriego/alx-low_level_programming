@@ -8,14 +8,10 @@
  * Description: This func does what it does.
  * Return: returns 1 if success but 0 if false.
  */
-int _abs(int n);
+int _abs(int n)
 {
-	if (n >= 0)
-	{
-		return (n);
-	}
-	else
-	{
-		return (n * -1);
-	}
+	int a;
+
+	a = abs(n);
+	return (a);
 {
