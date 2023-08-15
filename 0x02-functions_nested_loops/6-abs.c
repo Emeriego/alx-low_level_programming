@@ -10,8 +10,12 @@
  */
 int _abs(int n);
 {
-	int a;
-
-	a = abs(n);
-	return (a);
+	if (n >= 0)
+	{
+		return (n);
+	}
+	else
+	{
+		return (n * -1);
+	}
 {
