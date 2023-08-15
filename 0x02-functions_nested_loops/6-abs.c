@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 /**
- * print_sign - this does what you see.
+ * _abs - this does what you see.
  * @n: The character to be checked.
  *
  * Description: This func does what it does.
