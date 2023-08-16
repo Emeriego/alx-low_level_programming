@@ -10,7 +10,7 @@
 void jack_bauer(void)
 {
 	int x;
-	int y;
+	int c;
 
 	c = 0;
 

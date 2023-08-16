@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_last_digit - this does what you see.
+ * add - this does what you see.
  * @num1: The character to be checked.
  * @num2: The character to be checked.
  *
