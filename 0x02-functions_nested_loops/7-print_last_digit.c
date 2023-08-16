@@ -11,20 +11,16 @@
 int print_last_digit(int n)
 {
 	int a;
-	n = abs(n);
-
-	if (n > 99)
+	
+	if (n < 0)
 	{
-		a = ((n / 100) / 10) % 10;
-	}
-	else if (n > 999)
-	{
-		a = (((n / 1000) / 100) / 10) % 10;
-	}
-	else
-	{
+		n = -n;
 		a = n % 10;
 	}
+	if (a < 0)
+	{
+		a = -a;
+	}
 	_putchar(a + '0');
-	return (0);
+	return (a);
 }
