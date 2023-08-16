@@ -2,9 +2,6 @@
 /**
  * print_times_table - this does what you see.
  * @n: The character to be checked.
- *
- * Description: This func does what it does.
- * Return: returns 1 if success but 0 if false.
  */
 void print_times_table(int n)
 {
@@ -18,9 +15,7 @@ void print_times_table(int n)
 			{
 				z = y * x;
 				if (y == 0)
-				{
 					_putchar(z + '0');
-				}
 				else if (z < 10 && y != 0)
 				{
 					_putchar(',');
