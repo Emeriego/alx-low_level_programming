@@ -1,11 +1,10 @@
 #include "main.h"
-#include <stdio.h>
 #include <ctype.h>
 /**
- * _isupper - prints upper.
+ * mul - prints product of two numbers.
  * @a: character to be converted.
  * @b: character to be converted.
- * Return: reurns 0 or 1.
+ * Return: reurns product.
  */
 int mul(int a, int b)
 {
@@ -14,4 +13,3 @@ int mul(int a, int b)
 	prd = a * b;
 	return (prd);
 }
-
