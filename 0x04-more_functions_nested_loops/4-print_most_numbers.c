@@ -1,8 +1,6 @@
 #include "main.h"
 /**
- * _isupper - prints upper.
- * @c: character to be converted.
- * Return: reurns 0 or 1.
+ * print_most_numbers - prints numbers.
  */
 void print_most_numbers(void)
 {
