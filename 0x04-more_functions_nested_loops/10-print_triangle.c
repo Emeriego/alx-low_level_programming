@@ -7,13 +7,13 @@ void print_triangle(int size)
 {
 	if (!(size <= 0))
 	{
-		int height = size;
+		int height = 0;
 
-		while (height > 0)
+		while (height <  size)
 		{
-			int width = size;
+			int width = 0;
 
-			while (width > 0)
+			while (width < size)
 			{
 				if (width < size - (height + 1))
 				{
@@ -23,10 +23,10 @@ void print_triangle(int size)
 				{
 					_putchar('#');
 				}
-				width--;
+				width++;
 			}
 			_putchar('\n');
-			height--;
+			height++;
 		}
 	}
 	else
