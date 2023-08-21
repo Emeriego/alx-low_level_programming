@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-#include <ctype.h>
 /**
  * _isalpha - this does what you see.
  * @c: The character to be checked.

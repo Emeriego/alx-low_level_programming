@@ -8,7 +8,6 @@ int main(void)
 {
 	long int i = 1;
 	long int n;
-	long int d;
 
 	n = 612852475143;
 	while (i <= n)
@@ -20,8 +19,7 @@ int main(void)
 				printf("%ld\n", i);
 				break;
 			}
-			d = n / i;
-			n = d;
+			n = n / i;
 		}
 		i++;
 	}
