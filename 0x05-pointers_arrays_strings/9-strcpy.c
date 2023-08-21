@@ -4,6 +4,7 @@
  * _strcpy - This functions resets a value.
  * @dest: This is a param.
  * @src: This is a param.
+ * Return: Returns dest.
  */
 char *_strcpy(char *dest, char *src)
 {
