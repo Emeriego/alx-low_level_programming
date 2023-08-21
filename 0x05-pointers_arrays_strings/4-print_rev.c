@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 #include <string.h>
 /**
  * print_rev - This functions resets a value.
@@ -11,7 +10,7 @@ void print_rev(char *s)
 
 	for (i = strlen(s); i >= 0; i--)
 	{
-		printf("%c", s[i]);
+		_putchar(s[i]);
 	}
-	printf("\n");
+	_putchar('\n');
 }
