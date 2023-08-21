@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 #include <string.h>
 /**
  * puts_half - This functions resets a value.
@@ -19,8 +20,8 @@ void puts_half(char *str)
 	}
 	while (n <= l)
 	{
-		_putchar(str[n]);
+		putchar(str[n]);
 		n++;
 	}
-	_putchar('\n');
+	putchar('\n');
 }
