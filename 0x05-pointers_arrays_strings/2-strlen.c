@@ -4,7 +4,7 @@
  * _strlen - This functions resets a value.
  * @s: This is a param.
  *
- * return: returns len.
+ * Return: returns len.
  */
 int _strlen(char *s)
 {
