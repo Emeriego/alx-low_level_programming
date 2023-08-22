@@ -1,5 +1,6 @@
 #include "main.h"
 #include <string.h>
+#include <stdio.h>
 /**
  * print_rev - This functions resets a value.
  * @s: This is a param.
