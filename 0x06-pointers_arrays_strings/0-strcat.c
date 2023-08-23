@@ -3,10 +3,12 @@
  * *_strcat - This is a custom strcat.
  * @dest: First param.
  * @src: Second param.
- * Return: returns dest.
+ * Return: returns dest
  */
 char *_strcat(char *dest, char *src)
 {
+	char *original = dest;
+
 	while (*dest != '\0')
 	{
 		dest++;
@@ -17,5 +19,5 @@ char *_strcat(char *dest, char *src)
 		dest++;
 		src++;
 	}
-	return (dest);
+	return (original);
 }
