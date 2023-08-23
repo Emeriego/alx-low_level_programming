@@ -1,9 +1,9 @@
 #include "main.h"
-#include <string.h>
 /**
  * *_strcat - This is a custom strcat.
  * @dest: First param.
  * @src: Second param.
+ * Return: returns dest.
  */
 char *_strcat(char *dest, char *src)
 {
