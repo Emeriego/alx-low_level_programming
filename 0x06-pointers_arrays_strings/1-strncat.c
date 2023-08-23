@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 /**
  * *_strncat - This is a custom strncat.
  * @dest: First param.
@@ -9,14 +10,19 @@
 char *_strncat(char *dest, char *src, int n)
 {
 	char *original = dest;
+	int slen = 0;
+
+	while (*src != '\n')
+	{
+		slen++;
+	}
 
 	while (*dest != '\0')
 	{
 		dest++;
 	}
-		int slen = strlen(src);
 
-		if (n <= slen - 1)
+		if (n <= slen)
 		{
 			while (n > 0)
 			{
