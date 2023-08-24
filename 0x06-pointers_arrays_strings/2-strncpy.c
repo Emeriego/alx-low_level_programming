@@ -1,7 +1,6 @@
 #include "main.h"
-#include <string.h>
 /**
- * *_strncpy - This is a custom strncat.
+ * _strncpy - This is a custom strncat.
  * @dest: First param.
  * @src: Second param.
  * @n: Third param.
@@ -23,7 +22,7 @@ char *_strncpy(char *dest, char *src, int n)
 		{
 			while (n >= 0)
 			{
-				dest[n] = src[n];
+				dest[n - 1] = src[n - 1];
 				n--;
 			}
 		}
