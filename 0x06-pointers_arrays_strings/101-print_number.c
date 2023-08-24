@@ -1,8 +1,7 @@
 #include "main.h"
 /**
- * rot13 - This is a custom strncat.
- * @s: First param.
- * Return: returns a pointer to string.
+ * print_number - This is a custom strncat.
+ * @n: First param.
  */
 void print_number(int n)
 {
