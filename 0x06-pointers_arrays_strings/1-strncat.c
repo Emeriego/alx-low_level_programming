@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * *_strncat - This is a custom strncat.
+ * _strncat - This is a custom strncat.
  * @dest: First param.
  * @src: Second param.
  * @n: Third param.
@@ -23,25 +23,25 @@ char *_strncat(char *dest, char *src, int n)
 	}
 	src = src - slen;
 
-		if (n <= slen)
+	if (n <= slen)
+	{
+		while (n > 0)
 		{
-			while (n > 0)
-			{
-				*dest = *src;
-				dest++;
-				src++;
-				n--;
-			}
+			*dest = *src;
+			dest++;
+			src++;
+			n--;
 		}
-		else
+	}
+	else
+	{
+		while (*src != '\0')
 		{
-			while (*src != '\0')
-			{
-				*dest = *src;
-				dest++;
-				src++;
-			}
+			*dest = *src;
+			dest++;
+			src++;
 		}
-		*dest = '\0';
-		return (original);
+	}
+	*dest = '\0';
+	return (original);
 }
