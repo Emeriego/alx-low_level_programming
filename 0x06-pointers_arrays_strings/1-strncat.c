@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 /**
  * *_strncat - This is a custom strncat.
  * @dest: First param.
