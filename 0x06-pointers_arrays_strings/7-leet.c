@@ -10,10 +10,10 @@ char *leet(char *s)
 	int j;
 	char alpha[] = "aAeEoOtTlL";
 	char digits[] = "4433007711";
-	
+
 	while (s[i] != '\0')
 	{
-		for (j=0; alpha[j] != '\0'; j++)
+		for (j = 0; alpha[j] != '\0'; j++)
 		{
 			if (s[i] == alpha[j])
 			{
