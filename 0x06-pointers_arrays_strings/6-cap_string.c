@@ -1,5 +1,4 @@
 #include "main.h"
-#include <string.h>
 /**
  * cap_string - This is a custom strncat.
  * @s: First param.
@@ -7,7 +6,6 @@
  */
 char *cap_string(char *s)
 {
-	char *original = s;
 	int i = 0;
 	char sep[] = " \t\n,;.!?\"(){}";
 
