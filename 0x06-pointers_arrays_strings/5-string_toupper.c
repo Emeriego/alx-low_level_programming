@@ -3,6 +3,7 @@
 /**
  * string_toupper - This is a custom strncat.
  * @s: First param.
+ * Return: returns a pointer to string.
  */
 char *string_toupper(char *s)
 {
