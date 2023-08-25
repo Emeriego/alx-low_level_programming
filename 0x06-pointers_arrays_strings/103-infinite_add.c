@@ -22,7 +22,7 @@ void reverse_string(char *number)
 	{
 		tmp = *(number + j);
 		*(number + j) = *(number + i);
-		*(umbern + i) = tmp;
+		*(number + i) = tmp;
 	}
 }
 
