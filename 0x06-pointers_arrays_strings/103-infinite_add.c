@@ -38,7 +38,7 @@ void reverse_string(char *number)
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int carry = 0, i = 0, j = 0, digits = 0;
-	int x_n1 = 0, x_n2 = 0, temp_tot = 0;
+	int x_n1 = 0, x_n2 = 0, result = 0;
 
 	while (*(n1 + i) != '\0')
 		i++;
@@ -58,14 +58,14 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			x_n2 = 0;
 		else
 			x_n2 = *(n2 + j) - '0';
-		temp_tot = x_n1 + x_n2 + carry;
-		if (temp_tot >= 10)
+		result = x_n1 + x_n2 + carry;
+		if (result >= 10)
 			carry = 1;
 		else
 			carry = 0;
 		if (digits >= (size_r - 1))
 			return (0);
-		*(r + digits) = (temp_tot % 10) + '0';
+		*(r + digits) = (result % 10) + '0';
 		digits++;
 		j--;
 		i--;
