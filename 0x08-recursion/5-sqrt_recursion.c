@@ -2,7 +2,7 @@
 /**
  * s_root - Recursion is fun.
  * @x: first param.
- * @x: second param.
+ * @y: second param.
  * Return: returns square root of n or 0.
  */
 int s_root(int x, int y)
