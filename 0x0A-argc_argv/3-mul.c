@@ -7,18 +7,14 @@
  */
 int main(int argc, char *argv[])
 {
-	if (argc < 3 || argc > 3)
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	else
-	{
-		int a = argv[1];
-		int b = argv[2];
+		int a = atoi(argv[1]);
+		int b = atoi(argv[2]);
 		int mul = a * b;
 
 		printf("%s\n", mul);
-	}
-
 }
