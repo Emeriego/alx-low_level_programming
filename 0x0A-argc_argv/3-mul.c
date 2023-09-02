@@ -17,5 +17,5 @@ int main(int argc, char *argv[])
 		int b = atoi(argv[2]);
 		int mul = a * b;
 
-		printf("%s\n", mul);
+		printf("%d\n", mul);
 }
