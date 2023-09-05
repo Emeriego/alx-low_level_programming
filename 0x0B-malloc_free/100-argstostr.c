@@ -20,7 +20,7 @@ char *argstostr(int ac, char **av)
 	}
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; av[i][j] != NULL; j++)
+		for (j = 0; av[i][j]; j++)
 		{
 			len++;
 		}
@@ -33,7 +33,7 @@ char *argstostr(int ac, char **av)
 	}
 	for (i = 0; i < ac; i++)
 	{
-		for (j = 0; av[i][j] != NULL; j++)
+		for (j = 0; av[i][j]; j++)
 		{
 			str[k] = av[i][j];
 			k++;
