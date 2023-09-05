@@ -1,9 +1,10 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * free_grid - This Function concatenates.
- * @grid: first param.
- * @height: second param.
+ * argstostr - This Function concatenates.
+ * @ac: first param.
+ * @av: second param.
+ * Return: returns a pointer.
  */
 char *argstostr(int ac, char **av)
 {
