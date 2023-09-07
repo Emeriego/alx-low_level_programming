@@ -5,7 +5,7 @@
  * @s1: first param.
  * @s2: second param.
  * @n: third param.
- * Returns: returns a pointer.
+ * Return: returns a pointer.
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
