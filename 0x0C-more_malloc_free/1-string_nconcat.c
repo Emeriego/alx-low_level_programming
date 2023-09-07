@@ -13,8 +13,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int c, len;
 	unsigned int len_s1, len_s2, k = 0;
 
-	s1 = s1 == NULL ? "" : s1;
-	s2 = s2 == NULL ? "" : s2;
+	s1 = s1 == NULL ? '' : s1;
+	s2 = s2 == NULL ? '' : s2;
 	for (c = 0; s1[c] != '\0'; c++)
 		len_s1++;
 
