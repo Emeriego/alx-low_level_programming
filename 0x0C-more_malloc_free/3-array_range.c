@@ -4,7 +4,7 @@
  * array_range - This would create an array block.
  * @min: first param.
  * @max: second param.
- * Returns: returns a pointer.
+ * Return: returns a pointer.
  */
 int *array_range(int min, int max)
 {
