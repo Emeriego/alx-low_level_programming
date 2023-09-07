@@ -4,11 +4,11 @@
  * _calloc - This would concatenate string block.
  * @nmemb: first param.
  * @size: second param.
- * Returns: returns a pointer.
+ * Return: returns a pointer.
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *ptr;
+	int *ptr;
 	size_t c;
 
 	if (nmemb == 0 || size == 0)
