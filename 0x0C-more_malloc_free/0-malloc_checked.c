@@ -3,13 +3,11 @@
 /**
  * malloc_checked - This would allocate memory block.
  * @b: first param.
- * Returns: returns a pointer.
+ * Return: returns a pointer.
  */
 void *malloc_checked(unsigned int b)
 {
-	void *ptr;
-
-	ptr = malloc(b);
+	void *ptr = malloc(b);
 
 	if (ptr == NULL)
 	{
