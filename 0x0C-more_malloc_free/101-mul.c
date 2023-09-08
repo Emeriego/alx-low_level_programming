@@ -55,7 +55,7 @@ void err(void)
  *
  * Return: always 0 if success
  */
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
 	char *s1, *s2;
 	int carry, digit1, digit2, *result, len1, len2, len, c,  a = 0;
@@ -70,7 +70,7 @@ int main(int argc, char *argv)
 	if (!result)
 		return (1);
 	for (c = 0; c <= len1 + len2; c++)
-		result[i] = 0;
+		result[c] = 0;
 	for (len1 = len1 - 1; len1 >= 0; len1--)
 	{
 		digit1 = s1[len1] - '0';
@@ -87,7 +87,7 @@ int main(int argc, char *argv)
 	}
 	for (c = 0; c < len - 1; c++)
 	{
-		if (result[i])
+		if (result[c])
 			a = 1;
 		if (a)
 			_putchar(result[c] + '0');
