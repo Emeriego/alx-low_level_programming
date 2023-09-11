@@ -5,7 +5,7 @@
  *@name: first param.
  *@age: second param.
  *@owner: third param.
- *@Return: returns new dog.
+ *Return: returns new dog.
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
