@@ -1,12 +1,11 @@
 #include "dog.h"
-#include <stddef.h>
-#include <stdio.h>
+#include <stdlib.h>
 /**
  *new_dog - Creates a new dog.
  *@name: first param.
  *@age: second param.
  *@owner: third param.
- *@Return: returns 0.
+ *@Return: returns new dog.
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
