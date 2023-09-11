@@ -1,6 +1,11 @@
 #ifndef DOG_H
 #define DOG_H
-
+/**
+ * struct dog - This is my first struct.
+ * @name: this is the first member.
+ * @age: this is the second member.
+ * @owner: this is the third member.
+ */
 typedef struct dog
 {
 	char *name;
