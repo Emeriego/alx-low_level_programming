@@ -20,8 +20,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	{
 		for (i = 0; i < n; i++)
 		{
-			printf("%d%c ", va_arg(my_args, unsigned int), *separator);
+			printf("%d%s ", va_arg(my_args, unsigned int), *separator);
 		}
 		printf("%d\n", va_arg(my_args, unsigned int));
 	}
+	va_end(my_args);
 }
