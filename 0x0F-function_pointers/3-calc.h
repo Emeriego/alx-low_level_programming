@@ -1,7 +1,5 @@
 #ifndef MAIN_H
 #define MAIN_H
-
-#include <stdio.h>
 /**
  * struct op - Struct op is a data type
  *
