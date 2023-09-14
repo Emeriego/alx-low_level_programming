@@ -12,7 +12,10 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_list my_args;
 
 	va_start(my_args, n);
-
+	if (n <= 0)
+	{
+		return;
+	}
 	if (separator != NULL)
 	{
 		for (i = 0; i < n; i++)
