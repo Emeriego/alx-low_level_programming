@@ -7,15 +7,15 @@
  */
 void print_all(const char * const format, ...)
 {
-	int i, flag;
+	int flag;
 	char *str;
+	const char *format_clone = format;
 	va_list my_args;
 
 	va_start(my_args, format);
-	i = 0;
-	while (format && *format)
+	while (format_clone && *format_clone)
 	{
-		switch (*format)
+		switch (*format_clone)
 		{
 			case 'i':
 				printf("%d", va_arg(my_args, int));
@@ -40,9 +40,9 @@ void print_all(const char * const format, ...)
 				flag = 1;
 				break;
 		}
-		if (*(format + 1) && flag == 0)
+		if (*(format_clone + 1) && flag == 0)
 			printf(", ");
-		format++;
+		format_clone++;
 	}
 	printf("\n");
 	va_end(my_args);
