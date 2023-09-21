@@ -9,10 +9,10 @@ list_t *traverse_to_end_of(list_t *head)
 {
 	if (!head)
 		return (NULL);
-        while (head->next != NULL)
-        {
-            head = head->next;
-        }
+	while (head->next != NULL)
+	{
+		head = head->next;
+	}
 	return (head);
 }
 /**
