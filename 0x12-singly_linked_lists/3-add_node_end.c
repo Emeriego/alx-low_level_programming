@@ -9,11 +9,11 @@ list_t *traverse_to_end_of(list_t *head)
 {
 	if (!head)
 		return (NULL);
-        while (current->next != NULL)
+        while (head->next != NULL)
         {
-            current = current->next;
+            head = head->next;
         }
-	return (current);
+	return (head);
 }
 /**
  * add_node_end - adds node at the end of singly  linked  lists.
@@ -32,11 +32,18 @@ list_t *add_node_end(list_t **head, const char *str)
 	node_last->str = strdup(str);
 	node_last->len = strlen(str);
 	node_last->next = NULL;
-	traverse_to_end_of(*head)->next = node_last;
 	if (!node_last->str)
 	{
 		free(node_last);
 		return (NULL);
+	}
+	if (*head == NULL)
+	{
+		*head = node_last;
+	}
+	else
+	{
+		traverse_to_end_of(*head)->next = node_last;
 	}
 	return (node_last);
 }
