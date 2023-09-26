@@ -3,10 +3,10 @@
 /**
  * add_nodeint - adds node at the start of singly  linked  lists.
  * @head: first parameter.
- * @str: second parameter.
+ * @n: second parameter.
  * Return: returns the address of the added node.
  */
-listint_t *add_node(listint_t **head, const int n)
+listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *node_new;
 
