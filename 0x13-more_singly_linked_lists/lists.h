@@ -13,6 +13,20 @@ typedef struct listint_s
 	int n;
 	struct listint_s *next;
 } listint_t;
+
+/**
+ * struct my_list - list of pointers.
+ * @p: pointers to nodes
+ * @next: points to the next pointer.
+ *
+ * Description: singly linked list of pointers
+ */
+typedef struct my_list
+{
+	void *p;
+	struct my_list *next;
+} list_ptr;
+void del_list(list_ptr **head);
 size_t print_listint(const listint_t *h);
 size_t listint_len(const listint_t *h);
 listint_t *add_nodeint(listint_t **head, const int n);
