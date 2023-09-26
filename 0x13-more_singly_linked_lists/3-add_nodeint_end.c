@@ -21,7 +21,7 @@ listint_t *traverse_to_end_of(listint_t *head)
  * @n: second parameter.
  * Return: returns the address of the added node.
  */
-listint_t *add_node_end(listint_t **head, const int n)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *node_last;
 
