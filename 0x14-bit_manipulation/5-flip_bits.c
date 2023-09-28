@@ -12,7 +12,8 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 
 	while (x_result > 0)
 	{
-		c = c + x_result & 1;
+		if ((x_result & 1) == 1)
+			c++;
 		x_result = x_result >> 1;
 	}
 	return (c);
