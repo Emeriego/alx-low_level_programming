@@ -24,9 +24,9 @@ listint_t *find_listint_loop(listint_t *head)
 			{
 				headx2 = pre_node;
 				while (headx2->next != head && headx2->next != pre_node)
-                    headx2 = headx2->next;
+					headx2 = headx2->next;
 				if (headx2->next == head)
-                    break;
+					break;
 				head = head->next;
 			}
 			return (headx2->next);
