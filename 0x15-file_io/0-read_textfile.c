@@ -8,7 +8,7 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buf;
-	int *fdesc;
+	int fdesc;
 	ssize_t bitesEaten, bitesCount;
 
 	if (filename == NULL)
