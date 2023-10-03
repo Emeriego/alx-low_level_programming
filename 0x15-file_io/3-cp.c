@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	int stat_r, stat_w;
 	char buffer[1024];
 	int f_in, f_out;
-	int close_in, close_out;
+	int f_in_close, f_out_close;
 
 	if (argc != 3)
 		prnt_err(97, NULL, 0);
@@ -37,12 +37,12 @@ int main(int argc, char *argv[])
 		stat_r = read(f_in, buffer, 1024);
 	}
 
-	close_in = close(f_in); /*close file_in*/
-	if (close_in == -1)
+	f_in_close = close(f_in);
+	if (f_in_close == -1)
 		prnt_err(100, NULL, f_in);
 
-	close_out = close(f_out); /*close file_out*/
-	if (close_out == -1)
+	f_out_close = close(f_out);
+	if (f_out_close == -1)
 		prnt_err(100, NULL, f_out);
 	return (0);
 }
