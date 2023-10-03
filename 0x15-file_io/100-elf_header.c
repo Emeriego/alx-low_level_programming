@@ -72,7 +72,7 @@ void checkElf(unsigned char *eIdent)
 {
 	int index;
 
-	for (index = 0; index < 4; ndex++)
+	for (index = 0; index < 4; index++)
 	{
 		if (eIdent[index] != 127 &&
 		    eIdent[index] != 'E' &&
