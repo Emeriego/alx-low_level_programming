@@ -1,4 +1,7 @@
 #include "main.h"
+#include <elf.h>
+#include <sys/types.h>
+#include <sys/stat.h>
 void closn_func(int f_file);
 void entryPrnt(unsigned long int entry_addr, unsigned char *eIdent);
 void typePrnt(unsigned int e_type, unsigned char *eIdent);
