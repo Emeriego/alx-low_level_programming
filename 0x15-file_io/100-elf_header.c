@@ -1,9 +1,5 @@
 #include "main.h"
-#include <elf.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <stdio.h>
-#include <fcntl.h>
+
 void closn_func(int f_file);
 void entryPrnt(unsigned long int entry_addr, unsigned char *eIdent);
 void typePrnt(unsigned int e_type, unsigned char *eIdent);
@@ -91,7 +87,7 @@ void checkElf(unsigned char *eIdent)
 */
 void classPrnt(unsigned char *eIdent)
 {
-	printf("   Class:           ");
+	printf("  Class:                             ");
 	switch (eIdent[EI_CLASS])
 	{
 		case ELFCLASSNONE:
@@ -114,7 +110,7 @@ void classPrnt(unsigned char *eIdent)
 */
 void dataPrnt(unsigned char *eIdent)
 {
-	printf("  Data:           ");
+	printf("  Data:                              ");
 	switch (eIdent[EI_DATA])
 	{
 		case ELFDATANONE:
@@ -138,7 +134,7 @@ void dataPrnt(unsigned char *eIdent)
 */
 void entryPrnt(unsigned long int entry_addr, unsigned char *eIdent)
 {
-	printf("  Entry point address:          ");
+	printf("  Entry point address:               ");
 	if (eIdent[EI_DATA] == ELFDATA2MSB)
 	{
 		entry_addr = ((entry_addr << 8) & 0xFF00FF00) |
@@ -158,7 +154,7 @@ void entryPrnt(unsigned long int entry_addr, unsigned char *eIdent)
 */
 void versionPrnt(unsigned char *eIdent)
 {
-	printf("   Version:           ");
+	printf("  Version:                           ");
 	if (eIdent[EI_VERSION] == EV_CURRENT)
 		printf("%d (current)\n", eIdent[EI_VERSION]);
 	else
@@ -171,8 +167,8 @@ void versionPrnt(unsigned char *eIdent)
 */
 void osabiPrnt(unsigned char *eIdent)
 {
-	printf("  OS/ABI:                    ");
-	switch (eIdent[EI_OSABI])/*EI_OSABI = OS Application Binary Interface*/
+	printf("  OS/ABI:                            ");
+	switch (eIdent[EI_OSABI])
 	{
 		case ELFOSABI_SYSV:
 			printf("UNIX - System V\n");
@@ -219,7 +215,7 @@ void osabiPrnt(unsigned char *eIdent)
 */
 void abiPrnt(unsigned char *eIdent)
 {
-	printf("  ABI Version:                %d\n",
+	printf("  ABI Version:                      %d\n",
 		eIdent[EI_ABIVERSION]);
 }
 /**
@@ -232,7 +228,7 @@ void typePrnt(unsigned int e_type, unsigned char *eIdent)
 {
 	if (eIdent[EI_DATA] == ELFDATA2MSB)
 		e_type >>= 8;
-	printf("  Type:                       ");
+	printf("  Type:                              ");
 	switch (e_type)
 	{
 		case ET_NONE:
@@ -277,7 +273,7 @@ void magicPrnt(unsigned char *eIdent)
 {
 	int index;
 
-	printf("  Magic            ");
+	printf("  Magic:                             ");
 	for (index = 0; index < EI_NIDENT; index++)
 	{
 		printf("%02x", eIdent[index]);
