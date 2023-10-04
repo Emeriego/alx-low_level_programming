@@ -44,16 +44,16 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 		dprintf(STDERR_FILENO, "Error: `%s`: No such file\n", argv[1]);
 		exit(98);
 	}
-	checkElf(elf->e_ident);
+	checkElf(elf->eIdent);
 	printf("ELF Header:\n");
-	magicPrnt(elf->e_ident);
-	classPrnt(elf->e_ident);
-	dataPrnt(elf->e_ident);
-	versionPrnt(elf->e_ident);
-	osabiPrnt(elf->e_ident);
-	abiPrnt(elf->e_ident);
-	typePrnt(elf->e_type, elf->e_ident);
-	entryPrnt(elf->e_entry, elf->e_ident);
+	magicPrnt(elf->eIdent);
+	classPrnt(elf->eIdent);
+	dataPrnt(elf->eIdent);
+	versionPrnt(elf->eIdent);
+	osabiPrnt(elf->eIdent);
+	abiPrnt(elf->eIdent);
+	typePrnt(elf->e_type, elf->eIdent);
+	entryPrnt(elf->entry_addr, elf->eIdent);
 	free(elf);
 	closn_func(f_file);
 	return (0);
@@ -88,19 +88,20 @@ void checkElf(unsigned char *eIdent)
 void classPrnt(unsigned char *eIdent)
 {
 	printf("  Class:                             ");
+
 	switch (eIdent[EI_CLASS])
 	{
-		case ELFCLASSNONE:
-			printf("none\n");
-			break;
-		case ELFCLASS32:
-			printf("ELF32\n");
-			break;
-		case ELFCLASS64:
-			printf("ELF64\n");
-			break;
-		default:
-			printf("<unknown: %x>\n", eIdent[EI_CLASS]);
+	case ELFCLASSNONE:
+		printf("none\n");
+		break;
+	case ELFCLASS32:
+		printf("ELF32\n");
+		break;
+	case ELFCLASS64:
+		printf("ELF64\n");
+		break;
+	default:
+		printf("<unknown: %x>\n", eIdent[EI_CLASS]);
 	}
 }
 /**
@@ -111,19 +112,20 @@ void classPrnt(unsigned char *eIdent)
 void dataPrnt(unsigned char *eIdent)
 {
 	printf("  Data:                              ");
+
 	switch (eIdent[EI_DATA])
 	{
-		case ELFDATANONE:
-			printf("none\n");
-			break;
-		case ELFDATA2LSB:
-			printf("2's complement, little endian\n");
-			break;
-		case ELFDATA2MSB:
-			printf("2's complement, big endian\n");
-			break;
-		default:
-			printf("<unknown: %x>\n", eIdent[EI_DATA]);
+	case ELFDATANONE:
+		printf("none\n");
+		break;
+	case ELFDATA2LSB:
+		printf("2's complement, little endian\n");
+		break;
+	case ELFDATA2MSB:
+		printf("2's complement, big endian\n");
+		break;
+	default:
+		printf("<unknown: %x>\n", eIdent[EI_CLASS]);
 	}
 }
 /**
@@ -135,14 +137,17 @@ void dataPrnt(unsigned char *eIdent)
 void entryPrnt(unsigned long int entry_addr, unsigned char *eIdent)
 {
 	printf("  Entry point address:               ");
+
 	if (eIdent[EI_DATA] == ELFDATA2MSB)
 	{
 		entry_addr = ((entry_addr << 8) & 0xFF00FF00) |
 			  ((entry_addr >> 8) & 0xFF00FF);
 		entry_addr = (entry_addr << 16) | (entry_addr >> 16);
 	}
+
 	if (eIdent[EI_CLASS] == ELFCLASS32)
 		printf("%#x\n", (unsigned int)entry_addr);
+
 	else
 		printf("%#lx\n", entry_addr);
 }
@@ -215,8 +220,8 @@ void osabiPrnt(unsigned char *eIdent)
 */
 void abiPrnt(unsigned char *eIdent)
 {
-	printf("  ABI Version:                      %d\n",
-		eIdent[EI_ABIVERSION]);
+	printf("  ABI Version:                       %d\n",
+	       eIdent[EI_ABIVERSION]);
 }
 /**
  * typePrnt - the type of the ELF file is printed.
