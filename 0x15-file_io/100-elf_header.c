@@ -45,8 +45,6 @@ void class_prnt(unsigned char *e_ident)
 		printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 	}
 }
-
-
 /**
  * data_prnt - Prints the data.
  * @e_ident: A pointer to an array containing the ELF class.
@@ -54,7 +52,6 @@ void class_prnt(unsigned char *e_ident)
 void data_prnt(unsigned char *e_ident)
 {
 	printf("  Data:                              ");
-
 	switch (e_ident[EI_DATA])
 	{
 	case ELFDATANONE:
@@ -70,7 +67,6 @@ void data_prnt(unsigned char *e_ident)
 		printf("<unknown: %x>\n", e_ident[EI_CLASS]);
 	}
 }
-
 
 /**
  * entry_prnt - Prints the entry.
@@ -95,7 +91,6 @@ void entry_prnt(unsigned long int e_entry, unsigned char *e_ident)
 		printf("%#lx\n", e_entry);
 }
 
-
 /**
  * magic_prnt - Prints the magic number.
  * @e_ident: pointer to an array.
@@ -103,11 +98,10 @@ void entry_prnt(unsigned long int e_entry, unsigned char *e_ident)
  */
 void magic_prnt(unsigned char *e_ident)
 {
-	int index;
+	int index = 0;
 
 	printf("  Magic:   ");
-
-	for (index = 0; index < EI_NIDENT; index++)
+	while (index < EI_NIDENT)
 	{
 		printf("%02x", e_ident[index]);
 
@@ -115,6 +109,7 @@ void magic_prnt(unsigned char *e_ident)
 			printf("\n");
 		else
 			printf(" ");
+		index++;
 	}
 }
 
@@ -125,7 +120,6 @@ void magic_prnt(unsigned char *e_ident)
 void osabi_prnt(unsigned char *e_ident)
 {
 	printf("  OS/ABI:                            ");
-
 	switch (e_ident[EI_OSABI])
 	{
 	case ELFOSABI_NONE:
@@ -162,8 +156,6 @@ void osabi_prnt(unsigned char *e_ident)
 		printf("<unknown: %x>\n", e_ident[EI_OSABI]);
 	}
 }
-
-
 /**
  * type_prnt - Prints the type.
  * @e_type: The ELF type.
@@ -197,8 +189,6 @@ void type_prnt(unsigned int e_type, unsigned char *e_ident)
 		printf("<unknown: %x>\n", e_type);
 	}
 }
-
-
 /**
  * version_prnt - Prints the version.
  * @e_ident: A pointer to an array.
@@ -218,7 +208,6 @@ void version_prnt(unsigned char *e_ident)
 		break;
 	}
 }
-
 /**
  * elf_check - Checks if a file.
  * @e_ident: pointer to an array.
@@ -226,9 +215,9 @@ void version_prnt(unsigned char *e_ident)
  */
 void elf_check(unsigned char *e_ident)
 {
-	int i;
+	int i = 0;
 
-		for (i = 0; i < 4; i++)
+		while (i < 4)
 	{
 		if (e_ident[i] != 127 &&
 		    e_ident[i] != 'E' &&
@@ -238,10 +227,9 @@ void elf_check(unsigned char *e_ident)
 			dprintf(STDERR_FILENO, "Error: Not an ELF file\n");
 			exit(98);
 		}
+		i++;
 	}
 }
-
-
 /**
  * closn_func - Closes the ELF.
  * @elf: The handle for the ELF file.
@@ -256,10 +244,8 @@ void closn_func(int elf)
 		exit(98);
 	}
 }
-
 /**
- * main - Displays the information contained in the
- *        ELF header at the start of an ELF file.
+ * main - prints the information contained in ELF.
  * @argc: The number of arguments supplied to the program.
  * @argv: array of pointers to the arguments.
  * Return: 0 on success.
