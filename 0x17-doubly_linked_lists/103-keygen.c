@@ -15,9 +15,9 @@ int gen1(char *usrn, int length)
 
 	for (my_ch = 0; my_ch < length; my_ch++)
 		if (my_user < usrn[my_ch])
-        {
+		{
 			my_user = usrn[my_ch];
-        }
+		}
 	srand(my_user ^ 14);
 	rand_num = rand();
 	return (rand_num & 63);
@@ -72,7 +72,7 @@ int main(int argc, char **argv)
 		0x74767a5835737956, 0x2b554c59634a474f, 0x71786636576a6d34,
 		0x723161513346655a, 0x6b756f494b646850 };
 	(void) argc;
-    length = 0;
+	length = 0;
 	while (argv[1][length])
 		length++;
 	keygen[0] = ((char *)my_long_alpha)[(length ^ 59) & 63];
@@ -95,11 +95,11 @@ int main(int argc, char **argv)
 	keygen[4] = ((char *)my_long_alpha)[gen2(argv[1], length)];
 	keygen[5] = ((char *)my_long_alpha)[gen3(argv[1])];
 	keygen[6] = '\0';
-    my_user = 0; 
+	my_user = 0; 
 	while (keygen[my_user])
-    {
-        printf("%c", keygen[my_user]);
-        my_user++;
-    }
+	{
+	    printf("%c", keygen[my_user]);
+	    my_user++;
+	}
 	return (0);
 }
