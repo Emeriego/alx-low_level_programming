@@ -12,15 +12,15 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int num)
 
 	if (frsh == NULL)
 		return (NULL);
-    frsh->next = NULL;
+	frsh->next = NULL;
 	frsh->n = num;
 	h = *head;
 	if (h != NULL)
 	{
 		while (h->next != NULL)
-        {
+		{
 			h = h->next;
-        }
+		}
 		h->next = frsh;
 	}
 	else
