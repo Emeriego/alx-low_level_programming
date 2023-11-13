@@ -13,12 +13,12 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 
 	myhd1 = *head;
 	if (myhd1 != NULL)
-    {
-        while (myhd1->prev != NULL)
-        {
-            myhd1 = myhd1->prev;
-        }
-    }
+	{
+		while (myhd1->prev != NULL)
+		{
+			myhd1 = myhd1->prev;
+		}
+	}
 	c = 0;
 	while (myhd1 != NULL)
 	{
@@ -34,9 +34,9 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 			{
 				myhd2->next = myhd1->next;
 				if (myhd1->next != NULL)
-                {
+				{
 					myhd1->next->prev = myhd2;
-                }
+				}
 			}
 			free(myhd1);
 			return (1);

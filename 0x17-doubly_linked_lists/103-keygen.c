@@ -22,7 +22,6 @@ int gen1(char *usrn, int length)
 	rand_num = rand();
 	return (rand_num & 63);
 }
-
 /**
  * gen2 - func multiplies username
  * @usrn: the username
